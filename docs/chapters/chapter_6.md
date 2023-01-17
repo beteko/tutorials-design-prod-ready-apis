@@ -1,4 +1,4 @@
-# 6. Writting Unit Testing
+# 6. Writing Unit Testing
 
 :house: [Overview](../../README.md)
 
