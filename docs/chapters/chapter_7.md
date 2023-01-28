@@ -1,13 +1,16 @@
-# 7. Ensuring Linting & Type Checking
+# 7. Ensuring Linting & Type Checking :coffee:
 
 :house: [Overview](../../README.md)
 
 
 
 
+<br>
+<br>
+
 ---
 
 
-[ << ( Chapter 6 ) ](../chapters/chapter_6.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( Chapter 8 ) >>](../chapters/chapter_8.md)  
+[ << (  6. Writing Unit Testing ) ](../chapters/chapter_6.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 8.Packaging with Setup.py ) >>](../chapters/chapter_8.md)  
  
  

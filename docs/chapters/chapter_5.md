@@ -1,13 +1,15 @@
-# 5. Enforcing Security
+# 5. Enforcing Security :lock:
 
 :house: [Overview](../../README.md)
 
 
 
+<br>
+<br>
 
 ---
 
 
-[ << ( Chapter 4 ) ](../chapters/chapter_4.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( Chapter 6 ) >>](../chapters/chapter_6.md)  
+[ << ( 4. Implementing Services ) ](../chapters/chapter_4#ping-service-implementation) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 6. Writing Unit Testing ) >>](../chapters/chapter_6.md)  
  
  

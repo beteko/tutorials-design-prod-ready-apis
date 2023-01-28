@@ -1,13 +1,16 @@
-# 8. Packaging with Setup.py
+# 8. Packaging with Setup.py  :package:
 
 :house: [Overview](../../README.md)
 
 
 
 
+<br>
+<br>
+
 ---
 
 
-[ << ( Chapter 7 ) ](../chapters/chapter_7.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( Chapter 9 ) >>](../chapters/chapter_9.md)  
+[ << ( 7. Ensuring Linting & Type Checking ) ](../chapters/chapter_7.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 9. Automation ) >>](../chapters/chapter_9.md)  
  
  

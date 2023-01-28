@@ -1,13 +1,16 @@
-# 9. Automate Integration/Deployment & Learning
+# 9. Automate Integration/Deployment & Learning :robot: 
 
 :house: [Overview](../../README.md)
 
 
 
 
+<br>
+<br>
+
 ---
 
 
-[ << ( Chapter 8 ) ](../chapters/chapter_8.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( Chapter 10 ) >>](../chapters/chapter_10.md)  
+[ << ( 8. Packaging with Setup.py ) ](../chapters/chapter_8.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 10. Going Further ! ) >>](../chapters/chapter_10.md)  
  
  

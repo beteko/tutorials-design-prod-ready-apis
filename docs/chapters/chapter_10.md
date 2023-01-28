@@ -1,13 +1,16 @@
-# 10. Going Further !
+# 10. Going Further ! :rocket:
 
 :house: [Overview](../../README.md)
 
+:thought_balloon:
 
 
+<br>
+<br>
 
 ---
 
 
-[ << ( Chapter 9 ) ](../chapters/chapter_9.md)
+[ << ( 9. Automation ) ](../chapters/chapter_9.md)
  
  

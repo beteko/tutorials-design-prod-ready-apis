@@ -1,7 +1,7 @@
-# Design a Prod-Ready API 
+# Design a Prod-Ready API :building_construction: 
 
 
-## Table of Contents
+## :pushpin: Table of Contents
 1. [Project Structure](docs/chapters/chapter_1.md)
 2. [Starting with Connexion / Specs First](docs/chapters/chapter_2.md)
 3. [Understanding  OpenAPI Specs Standard](docs/chapters/chapter_3.md)
@@ -15,34 +15,36 @@
 
 
 
-## Overview 
+## :mag: Overview 
 
 This tutorial will guide you through a clear roadmap to design a ready-to-use Python API that meets the basic industry standards. Although brief, it includes exercises, reflexion points, and suggestions for improving upon the essentials.
 
  - By the end of this tutorial, one should  be able to  
     - Plan for an API Design before its implementation (Specs first) 
     - Secure an API
-    - Enable logging for tranceability
+    - Enable logging for traceability
     - Ensure Quality of code
     - Understand the Continuous Integration and Deployment Process ( Github Action )
   
 
 
-## Case study
+## :memo: Case Study
 
-As an API seeks to provide useful services to its end-users, it is imperative to start with a functional program/code from an experimental context. For our part, we decided to design the **Wine Quality Predictor** API whose functional prototype can be viewed her [here](https://github.com/architjen/MLOps_wine_quality). 
+Since an API seeks to provide useful services to its end users, it is imperative to start with a working program/code in an experimental context. For our part, we decided to design the **Wine Quality Predictor** API whose functional  ( :wine_glass: ) prototype can be viewed [here](https://github.com/architjen/Orness_DS_training). 
   
 
 
+## :checkered_flag: Pre-Requisites 
 
-## Pre-requisites 
+- A basic understanding of **Python 3** is required to follow this tutorial
+- A good IDE  ( Pycharm / Visual Code/ IntelliJ  ... )
+- A GitHub Account 
+- And that's it ! Really :innocent: 
 
-A basic understanding of **Python 3** is required to follow this tutorial. And that's it! Really :)  
 
-
+<br>
+<br>
 
 ---
 
-[Get Started ( Project Structure ) >>](docs/chapters/chapter_1.md)  
- 
-
+[Get Started ( Project Structure ) >>](docs/chapters/chapter_1#the-end-in-mind)

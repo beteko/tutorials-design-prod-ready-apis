@@ -1,8 +1,11 @@
-# 1. Project structure 
+# 1. Project structure :triangular_ruler:
 
 :house: [Overview](../../README.md)
 
-Let's cheat a bit and get a  view into the target project structure ...
+
+## The end in mind 
+
+Let's cheat a bit and get a  view into the target project structure and swagger UI ...
 
 <details>
   <summary>Target Project Tree Structure</summary>
@@ -19,25 +22,25 @@ Let's cheat a bit and get a  view into the target project structure ...
 │   └── winequality.csv 
 │
 ├── src
-│   ├── tests
-│   │   ├── assets
-│   │   │   ├── sample_data.csv   
-│   │   │   └── test_model.jl  
-│   │   ├── conftest.py  
-│   │   ├── test_healthcheck.py 
-│   │   ├── test_learner.py 
-│   │   └── test_predictor.py 
 │   │ 
-│   └── wine_predictor_api
-│       ├── security
-│       │   └── authentication.py 
-│       ├── services
-│       │   ├── healthcheck.py
-│       │   ├── learner.py 
-│       │   └── predictor.py
-│       └── specs
-│           └── openapi_spec.yaml
-│ 
+│   ├──wine_predictor_api
+│   │   ├── security
+│   │   │   └── authentication.py 
+│   │   ├── services
+│   │   │   ├── healthcheck.py
+│   │   │   ├── learner.py 
+│   │   │   └── predictor.py
+│   │   └── specs
+│   │       └── openapi_spec.yaml
+│   └── tests
+│       ├── assets
+│       │   ├── sample_data.csv   
+│       │   └── test_model.jl  
+│       ├── conftest.py  
+│       ├── test_healthcheck.py 
+│       ├── test_learner.py 
+│       └── test_predictor.py 
+│
 ├── .gitignore
 ├── config.template.json
 ├── launcher.sh 
@@ -50,14 +53,23 @@ Let's cheat a bit and get a  view into the target project structure ...
 ├── setup.py
 └── VERSION    
 
+
 ```
+</details>
+
+
+<details>
+  <summary>Target Swagger UI</summary>
+
+<img style="float: center;" src="../images/final-swagger-ui.png">
 
 </details>
 
 ---
 
+## First thing First ...  
 
-First thing First .. Let's create the basic structure.
+Let's create the basic blueprint of our project.
 
 - Create a new repository **wine-predictor-api** on your personal github  ( including a README.md and **.gitignore** )
 
@@ -71,7 +83,10 @@ First thing First .. Let's create the basic structure.
     cd wine-predictor-api/
     git checkout -b init
     ```
-
+- Create a virtual environment  **venv** 
+    ```
+    python -m venv venv 
+    ```
 - Create the below initial project tree
 
     ```
@@ -82,7 +97,9 @@ First thing First .. Let's create the basic structure.
     │
     ├── src
     │   └── wine_predictor_api
+    │       └── __init__.py 
     │
+    ├── venv 
     ├── .gitignore   
     ├── config.template.json    
     ├── requirements.txt
@@ -104,8 +121,11 @@ Initializing them with :
 
 
 
+<br>
+<br>
+
 ---
 
-[ << ( Overview ) ](../../README.md)  &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( Chapter 2 ) >>](../chapters/chapter_2.md)  
+[ << ( Overview ) ](../../README.md#table-of-contents)  &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 2. Starting with Connexion ) >>](../chapters/chapter_2.md#what-is-connexion-)  
  
  
