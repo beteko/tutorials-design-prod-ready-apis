@@ -48,5 +48,5 @@ Also known as **Spec-First** Framework, the philosophy of **Connexion** is to st
 ---
 
 
-[ << ( 1. Project Structure ) ](../chapters/chapter_1#the-end-in-mind) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 3. Understanding OpenAPI ) >>](../chapters/chapter_3#openapi-specs-structure)  
+[ << ( 1. Project Structure ) ](../chapters/chapter_1.md#the-end-in-mind) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 3. Understanding OpenAPI ) >>](../chapters/chapter_3.md#openapi-specs-structure)  
  
