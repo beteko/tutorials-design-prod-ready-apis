@@ -32,12 +32,13 @@
   
 - Create only one <b>server</b> url with the default value  "/"
 - Create one <b>tag</b> "Health"
-- Create a **PING** endpoint with 
-  - "GET" method  
-  - "/ping" as path 
-  - under the "Health" tag 
-  - controller/endpoint located at "wine_predictor_api.services.healthcheck.ping"
-  - returns **200** as response code when the server is UP
+- Create a **PING** endpoint 
+  - with "GET" as  method  
+  - with "/ping" as path 
+  - under the "Health" tag
+  - with the following description "Check the API health" 
+  - without parameters
+  - returns **200** as response code when the "API is up and running"
 
 <br>
 
@@ -54,8 +55,10 @@
 
 **CONNECT SPEC TO CONTROLLER**
 
-<br>
+  - under  "/ping" path, reference the adequate request handler located at **wine_predictor_api.services.healthcheck.ping**
 
+
+<br>
 
 <br>
 
@@ -278,9 +281,20 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
 <br>
 
-- Draft
-- Draft
-- Draft 
+within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we will add a new service interface to automate the **training phase** of the wine predictor. 
+  
+- Add a new <b>tag</b> "Learning"
+- Create a **Train Model** endpoint  
+  - with "PATCH" as method  
+  - with "/wine/model" as path 
+  - under the "Learning" tag
+  - with the following description "(Re)train the wine quality model based on a predifined dataset" 
+  - without parameters
+  - returns the responses code and description  below 
+    -  **200** as response code when the "New model has been successfully trained but discarded"
+    - **201** as response code when the "New model has been successfully trained and saved as default"
+    - **404** as response code when the "Model path is not foundd"
+    - **500** as response code when there is an "Internal server error"
 
 <br>
 
@@ -288,21 +302,44 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
 <br>
 
+- Add in **./config.json**  the path for your model 
+  ```json
+    {
+        ...
 
-- Draft
-- Draft
-- Draft 
+        "model":{
+            "path": "</path/to/wine/model>"
+        }
+    }
+  ```
 
-
+- Create a module  **learner.py** under package **wine_predictor_api.services**
+- In the **learner.py** module create  the functions below 
+  -  **load_data**  submodule that loads the CSV dataset (path in config file )
+     -  takes no argument
+     -  returns the dataset as DataFrame 
+  -  **evaluate_model** submodule that computes the accuracy of your model from the test split 
+     -  takes three (3) parameters 
+        -  the model 
+        -  the test data (without prediction)
+        -  the test target or ground truth (respective prediction of test data) 
+     -  returns the evaluation score ( Mean Square Error )
+  -  **save_model** submodule that saves the the hyperparameters of your model 
+     -  takes two(2) parameters 
+        -  the model object
+        -  the output path  (where the model will be saved)
+     - returns the status of write operation 
+  - **train_model** submodule that trains a model from the  train dataset, evaluate the model performance and save it if its performace is better the the existing model 
+    - takes no argument
+    - returns a tuple ( Description , Status Code )
+  
 <br>
 
 **CONNECT SPEC TO CONTROLLER**
 
 <br>
 
-- Draft
-- Draft
-- Draft 
+- under  "/wine/model" path, reference the adequate request handler located at **wine_predictor_api.services.learner.train_model**
 
 
 </details>
@@ -319,11 +356,48 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 <details>
     <summary>  <b> Design specification</b></summary>
 
-<br>
+<br> 
 
 **SPECS DESIGN**
 
 <br>
+
+within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we will add another service interface to **predict the quality** of the wine. 
+  
+- Add a new <b>tag</b> "Prediction"
+- Create a **Predict Wine Quality** endpoint  
+  - with "GET" as method  
+  - with "/wine/quality" as path 
+  - under the "Prediction" tag
+  - with the folling description "Estimate the quality of a wine based on several preselected features" 
+  - accepts the mandatory following query parameters
+    - fixed acidity 
+      - Nonvolatile, volatile acids of Wine. Value should be between 4.6 to 15.9
+    - volatile_acidity
+      - The amount of acetic acide in wine. Value should be between 0.12 to 1.58
+    - citric_acid
+      - Adds flavors to wine and is found in small quantity. Value should be between 0.0 to 1.0
+    - residual_sugar
+      - Sugar content after fermentation stops. Value should be between 0.9 to 15.5
+    - chlorides
+      - Residual Salt in the wine. Value should be between 0.012 to 0.611
+    - free_sulfur_dioxide
+      - The free form of SO2 exists in equilibrium between molecular SO2 and bisulfite ion. Value should be between 1.0 to 72.0
+    - total_sulfur_dioxide
+      - Amount of free and bound forms of SO2. Value should be between 6.0 to 289.0
+    - density
+      - The density of a substance is its mass per unit volume. Value should be between 0.99007 to 1.00368
+    - ph
+      -  Describes how acidic or basic a substance is. Value should be between 2.74 to 4.01
+    - sulphates
+       -  A wine additive that can contribute to sulfur dioxide gas (SO2) levels. Value should be between 0.33 to 2.0
+    - alcohol
+      - Percentage of alcohol content in the wine.  Value should be between 8.4 to 14.9
+  - returns the responses code and description  below 
+    -  **200** as response code when the "Wine quality is successfully estimated"
+    - **400** as response code when an "Missing/Invalid required parameter "
+    - **404** Model path is not found"
+    - **500** as response code when there is an "Internal server error"
 
 
 <br>
@@ -333,6 +407,26 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 <br>
 
 
+- Create a module  **predictor.py** under package **wine_predictor_api.services**
+- In the **predictor.py** module create  the functions below 
+  -  **load_model**  submodule that load the machine learning model from config file
+     -  takes no argument
+     -  returns model object  
+  -  **get_features** submodule that returns the list of all 11 feature names for predictin the quality of the wine 
+     -  takes no argument 
+     - returns a list of 11 features
+  -  **prepare_data** submodule that transforms all user inputs (11 params) from Dict to Numpy array   
+     -  takes one parameter 
+        -  data as **Dict**    
+     -  returns data in Numpy Array with values ordered based on **get_features** output 
+  - **estimate_wine_quality** submodule that estimate the quality of a wine from a defined set of features 
+    - takes  one parameter 
+      - user inputs (11 params) as **Dict**
+    - returns a Tuple ( Estimation JSONObject , Status Code )
+      - with **Estimation JSONObject** in the format below 
+        - {"estimation": \<predicted_value\>}
+
+
 <br>
 
 
@@ -340,13 +434,10 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
 <br>
 
+
+- under  "/wine/quality" path, reference the adequate request handler located at **wine_predictor_api.services.predictor.estimate_wine_quality**
+
 </details>
-
-<br>
-<br>
-
-
-> :camera: Find [here]() the current state of the project as at now
 
 
 <br>
@@ -355,5 +446,5 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 ---
 
 
-[ << ( 3. Understanding OpenAPI ) ](../chapters/chapter_3.md#openapi-specs-structure) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 5. Enforcing Security ) >>](../chapters/chapter_5.md)  
+[ << ( 3. Understanding OpenAPI ) ](../chapters/chapter_3.md#openapi-specs-structure) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 5. Enforcing Security ) >>](../chapters/chapter_5.md#protect-all-services)  
  
