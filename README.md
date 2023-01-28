@@ -30,7 +30,7 @@ This tutorial will guide you through a clear roadmap to design a ready-to-use Py
 
 ## :memo: Case Study
 
-Since an API seeks to provide useful services to its end users, it is imperative to start with a working program/code in an experimental context. For our part, we decided to design the **Wine Quality Predictor** API whose functional  ( :wine_glass: ) prototype can be viewed [here](https://github.com/architjen/Orness_DS_training). 
+Since an API seeks to provide useful services to its end users, it is imperative to start with a working program/code in an experimental context. For our part, we decided to design the **Wine Quality Predictor** API ( :wine_glass: ) whose functional   prototype can be viewed [here](https://github.com/architjen/Orness_DS_training). 
   
 
 

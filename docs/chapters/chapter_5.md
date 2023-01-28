@@ -10,6 +10,6 @@
 ---
 
 
-[ << ( 4. Implementing Services ) ](../chapters/chapter_4#ping-service-implementation) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 6. Writing Unit Testing ) >>](../chapters/chapter_6.md)  
+[ << ( 4. Implementing Services ) ](../chapters/chapter_4.md#ping-service-implementation) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 6. Writing Unit Testing ) >>](../chapters/chapter_6.md)  
  
  
