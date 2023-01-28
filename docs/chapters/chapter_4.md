@@ -355,5 +355,5 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 ---
 
 
-[ << ( 3. Understanding OpenAPI ) ](../chapters/chapter_3#openapi-specs-structure) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 5. Enforcing Security ) >>](../chapters/chapter_5.md)  
+[ << ( 3. Understanding OpenAPI ) ](../chapters/chapter_3.md#openapi-specs-structure) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 5. Enforcing Security ) >>](../chapters/chapter_5.md)  
  

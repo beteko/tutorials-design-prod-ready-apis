@@ -253,5 +253,5 @@ https://editor.swagger.io/
 ---
 
 
-[ << ( 2. Starting with Connexion ) ](../chapters/chapter_2#what-is-connexion-) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 4. Implementing Services ) >>](../chapters/chapter_4#ping-service-implementation)  
+[ << ( 2. Starting with Connexion ) ](../chapters/chapter_2.md#what-is-connexion-) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 4. Implementing Services ) >>](../chapters/chapter_4.md#ping-service-implementation)  
  

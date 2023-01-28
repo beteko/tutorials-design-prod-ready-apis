@@ -47,4 +47,4 @@ Since an API seeks to provide useful services to its end users, it is imperative
 
 ---
 
-[Get Started ( Project Structure ) >>](docs/chapters/chapter_1#the-end-in-mind)
+[Get Started ( Project Structure ) >>](docs/chapters/chapter_1.md#the-end-in-mind)
