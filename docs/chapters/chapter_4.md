@@ -200,7 +200,8 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 <br>
 
 - We will also create a JSON configuration file  **config.json** in the root project
-  **./config.json**
+  **./config.json** that will externalize from the code base all  sensitive infomation  or servers (Test/UAT/Prod) specific variables.  
+
   ```json
     {
         "spec_options": {
@@ -239,15 +240,13 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
   ```
 
-- Access the **api config** object  in any of your modules following the example below  
+- Access the **api_config** object  in any of your modules following the example below  
   
   ```python 
 
   from wine_predictor_api import api_config
 
-  logger.debug("Writing for accuntability ...")
-  logger.info("Just an information ...")
-  logger.error("An error occured ...")
+  data_path = api_config.get("data").get("path")
 
   ```
 
@@ -260,6 +259,41 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
     python -m flask run -h 0.0.0.0 -p $PORT
     ```
+
+- Also, we can even inject the  JSONObject **spec_options** (in the config file) to be rendered on our YAML spec (openapi_spec.yaml).  
+  - In  **./src/wine_predictor_api/specs/openapi_spec.yaml**, replace all information defined in the **info** section by jinja Template variable as illustrated below. 
+    ```yaml
+
+    openapi: 3.0.0
+    info:
+      title: {{title}}
+      description: {{description}}
+      contact:
+        name: {{contact_name}}
+        email: {{contact_email}}
+        url:  {{contact_website}}
+      version: {{version}}
+
+      ...
+
+    ```
+
+  - In **/src/wine_predictor_api/__init__.py** update the submodule  **create_app** to pass  as argument the JSONbject   **spec_options**  into the **connexion** object 
+    ```python
+      ...
+
+      def create_app():
+        spec_options = api_config.get("spec_options", {})
+        spec_options['version'] = os.environ.get("API_VERSION", 'version_not_set')
+
+        app = connexion.FlaskApp(__name__, specification_dir=specs.where())
+        app.add_api("openapi_spec.yaml", arguments=spec_options)
+        return app.app
+
+    ...
+
+    ```
+
 
 </details>
 
