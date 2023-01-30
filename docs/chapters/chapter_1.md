@@ -100,8 +100,7 @@ Let's create the basic blueprint of our project.
     │       └── __init__.py 
     │
     ├── venv 
-    ├── .gitignore   
-    ├── config.template.json    
+    ├── .gitignore    
     ├── requirements.txt
     ├── README.md  
     └── VERSION 

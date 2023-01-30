@@ -22,9 +22,10 @@ Also known as **Spec-First** Framework, the philosophy of **Connexion** is to st
 
 ## How can I use it ? 
 
-- First activate your virtual **venv** 
+- First activate your virtual **venv** and upgrade the package installer **pip** 
     ```
     source venv/bin/activate
+    pip install -U pip
     ```
 - Then install the **connexion** python library with a default swagger-ui  connexion[swagger-ui]
     ```

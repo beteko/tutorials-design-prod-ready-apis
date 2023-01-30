@@ -73,6 +73,11 @@ Then scan your source code by running the below in your terminal
 $ mypy src
 ```
 
+In some cases, external type checking libs are required to scan the code. You will have to run the type-checking analysis with the flags `install-types`  and `non-interactive`  
+```sh
+$ mypy --install-types --non-interactive src
+```
+
 :information_source:  : Here we defined our directory **src** to be the folder of interest for type-checking. 
 
 <br>
