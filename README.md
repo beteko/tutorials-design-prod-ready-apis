@@ -19,7 +19,7 @@
 
 ## :mag: Overview 
 
-This tutorial will guide you through a clear roadmap to design a ready-to-use Python API that meets the basic industry standards. Although brief, it includes exercises, reflexion points, and suggestions for improving upon the essentials.
+This tutorial will guide you through a clear roadmap to design a ready-to-use Python API that meets the basic industry standards. Although brief, it includes exercises, reflection points, and suggestions for improving upon the essentials.
 
  - By the end of this tutorial, one should  be able to  
     - Plan for an API Design before its implementation (Specs first) 

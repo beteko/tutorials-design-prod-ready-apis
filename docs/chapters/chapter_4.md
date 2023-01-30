@@ -8,7 +8,7 @@
 
 ## PING Service Implementation  
 
-:tada: **DIY** :  Lets's implement  the **PING** service with the specification below
+:tada: **DIY** :  let's implement  the **PING** service with the specification below
 
 
 <details>
@@ -77,7 +77,7 @@ To instantiate  a connexion object that will automagically links the specs to th
     def where():
         return os.path.dirname(os.path.realpath(__file__))
   ```
-- Then in **/src/wine_predictor_api/__init__.py**  create and initialize your connexion object refering the YAML spec  as described below 
+- Then in **/src/wine_predictor_api/__init__.py**  create and initialize your connexion object referring the YAML spec  as described below 
   ```python 
     import connexion
     from wine_predictor_api import specs
@@ -127,7 +127,7 @@ We will create a launcher file  **launcher.sh** in the root folder to define you
 
 <br>
 
-In order to properly log all activities **DEBUG, INFO, ERROR ...** for more accountablity, we will use the in-built python **logging** lib configured with  an external YAML file. 
+In order to properly log all activities **DEBUG, INFO, ERROR ...** for more accountability, we will use the in-built python **logging** lib configured with  an external YAML file. 
 
 - First, create the file  **logging.yaml** in the root folder 
 
@@ -186,9 +186,9 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
   from wine_predictor_api import logger
 
-  logger.debug("Writing for accuntability ...")
+  logger.debug("Writing for accountability ...")
   logger.info("Just an information ...")
-  logger.error("An error occured ...")
+  logger.error("An error occurred ...")
   
 
   ``` 
@@ -200,7 +200,7 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 <br>
 
 - We will also create a JSON configuration file  **config.json** in the root project
-  **./config.json** that will externalize from the code base all  sensitive infomation  or servers (Test/UAT/Prod) specific variables.  
+  **./config.json** that will externalize from the code base all  sensitive information  or servers (Test/UAT/Prod) specific variables.  
 
   ```json
     {
@@ -322,12 +322,12 @@ within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we wi
   - with "PATCH" as method  
   - with "/wine/model" as path 
   - under the "Learning" tag
-  - with the following description "(Re)train the wine quality model based on a predifined dataset" 
+  - with the following description "(Re)train the wine quality model based on a predefined dataset" 
   - without parameters
   - returns the responses code and description  below 
     -  **200** as response code when the "New model has been successfully trained but discarded"
     - **201** as response code when the "New model has been successfully trained and saved as default"
-    - **404** as response code when the "Model path is not foundd"
+    - **404** as response code when the "Model path is not found"
     - **500** as response code when there is an "Internal server error"
 
 <br>
@@ -358,12 +358,12 @@ within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we wi
         -  the test data (without prediction)
         -  the test target or ground truth (respective prediction of test data) 
      -  returns the evaluation score ( Mean Square Error )
-  -  **save_model** submodule that saves the the hyperparameters of your model 
+  -  **save_model** submodule that saves the the hyper-parameters of your model 
      -  takes two(2) parameters 
         -  the model object
         -  the output path  (where the model will be saved)
      - returns the status of write operation 
-  - **train_model** submodule that trains a model from the  train dataset, evaluate the model performance and save it if its performace is better the the existing model 
+  - **train_model** submodule that trains a model from the  train dataset, evaluate the model performance and save it if its performance is better the the existing model 
     - takes no argument
     - returns a tuple ( Description , Status Code )
   
@@ -403,12 +403,12 @@ within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we wi
   - with "GET" as method  
   - with "/wine/quality" as path 
   - under the "Prediction" tag
-  - with the folling description "Estimate the quality of a wine based on several preselected features" 
+  - with the following description "Estimate the quality of a wine based on several preselected features" 
   - accepts the mandatory following query parameters
     - fixed acidity 
       - Nonvolatile, volatile acids of Wine. Value should be between 4.6 to 15.9
     - volatile_acidity
-      - The amount of acetic acide in wine. Value should be between 0.12 to 1.58
+      - The amount of acetic acid in wine. Value should be between 0.12 to 1.58
     - citric_acid
       - Adds flavors to wine and is found in small quantity. Value should be between 0.0 to 1.0
     - residual_sugar
@@ -446,7 +446,7 @@ within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we wi
   -  **load_model**  submodule that load the machine learning model from config file
      -  takes no argument
      -  returns model object  
-  -  **get_features** submodule that returns the list of all 11 feature names for predictin the quality of the wine 
+  -  **get_features** submodule that returns the list of all 11 feature names for predicting the quality of the wine 
      -  takes no argument 
      - returns a list of 11 features
   -  **prepare_data** submodule that transforms all user inputs (11 params) from Dict to Numpy array   

@@ -15,10 +15,10 @@ Before writing all unit tests, we will create test assets or resources, import a
 
 **IMPORT DEPENDENCIES**
 
-Install on your active virtual environment the dependencies below  using `pip install <dependency-1> <dependency-2> ..<dependency-n>` .  
-- [pytest]()
-- [pytest-mock]()
-- [pytest-cov]()
+Install on your active virtual environment the dependencies below  using `pip install <dep-1> <dep-2> ..<dep-n>` .  
+- [pytest](https://docs.pytest.org/en/7.2.x/)
+- [pytest-mock](https://pypi.org/project/pytest-mock/)
+- [pytest-cov](https://pypi.org/project/pytest-cov/)
 
 
 :information: preferably create a text file **dev-requirements.txt** in the root folder and include all dependencies above.  
@@ -62,7 +62,7 @@ pytest-cov
 - Create the package `assets` in `./src/tests`
   - Then, create an sample or exact copy the CSV dataset in the `assets` folder and name it  `sample_data.csv`
   - Also create a copy of of a saved  model file in the `assets` folder  then name it `test_model.jl`
-- Finally implment a ***where** function in **./src/tests/__init__.py** module for facilitate referencing of the **asset** directory
+- Finally implement a ***where** function in **./src/tests/__init__.py** module for facilitate referencing of the **asset** directory
     ```python
     import os
 
@@ -78,7 +78,10 @@ pytest-cov
 We will create a module **conftest.py** in the package **./src/tests** where will implemented all shared fixtures. 
 
 
-**./src/tests/conftest.py**
+
+<details>
+    <summary>  <b> ./src/tests/conftest.py</b></summary>
+
 ```python
 import pytest
 import os
@@ -127,7 +130,7 @@ def app_runner(app, pytest_configure):
 def pytest_configure(config):
     os.environ["API_CONFIG"] = "config.template.json"
 ```
-
+</details>
 
 
 <br>
@@ -143,6 +146,7 @@ let's set up unit tests on key services/functions  such  as **ping**, **train_mo
 
 **"HEALTHCHECK" UNIT TEST**
 
+**./src/tests/test_healthcheck.py**
 ```python 
 def test_ping(app_client):
     # given
@@ -177,4 +181,4 @@ def test_ping(app_client):
 ---
 
 
-[ << ( 5. Enforcing Security ) ](../chapters/chapter_5.md#protect-all-services) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 7. Ensuring Linting & Type Checking ) >>](../chapters/chapter_7.md)
+[ << ( 5. Enforcing Security ) ](../chapters/chapter_5.md#protect-all-services) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 7. Ensuring Linting & Type Checking ) >>](../chapters/chapter_7.md#linting-with-flake8)

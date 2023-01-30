@@ -40,7 +40,7 @@ Also known as **Spec-First** Framework, the philosophy of **Connexion** is to st
   - More details in Chap.4  
 
 
-
+:thought_balloon:: Make sure to include  **connexion\[swagger-ui\]**  as part of the dependencies in the file  **requirements.txt** 
 
 <br>
 <br>

@@ -3,7 +3,7 @@
 :house: [Overview](../../README.md)
 
 Formerly known as Swagger specs (v2.0.0) Open API  Specification (OAS) is a standard used to document a Restful APIs. 
-It is representated in JSON or YAML  and has a well-defined structure that evolves according to the version. 
+It is represented in JSON or YAML  and has a well-defined structure that evolves according to the version. 
 
 
 ## OpenApi Specs Structure
@@ -121,7 +121,7 @@ Below are the basic blocks  of an OpenAPI spec
 </details>
 
 <details>
-  <summary> <b>Security</b></summary>
+  <summary> <b>SecuritySchemes</b></summary>
 
   A List of  all security mechanisms that can be used across the API. Under the **components** object
 

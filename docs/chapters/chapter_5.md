@@ -11,11 +11,11 @@
 
 Let's add a Basic Authentication ( username,  password ) to protect our services. 
 
-> :information: : For simplicity sake, we will save the user name and password within our config file. In normal circumstances, this need to be securely save under a secured database.
+> :information_source:  For simplicity sake, we will save the user name and password within our config file. In normal circumstances, this need to be securely save under a secured database.
 
 - In **./config.json**, we will add a key-value pair  for the basic authentication 
   
-  ```json
+  ```
     {
         ...
 
