@@ -21,7 +21,7 @@ Install on your active virtual environment the dependencies below  using `pip in
 - [pytest-cov](https://pypi.org/project/pytest-cov/)
 
 
-:information: preferably create a text file **dev-requirements.txt** in the root folder and include all dependencies above.  
+:information_source: preferably create a text file **dev-requirements.txt** in the root folder and include all dependencies above.  
 
 **./dev-requirements.txt**
 ```txt
