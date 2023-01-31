@@ -19,6 +19,8 @@
 
 ## :mag: Overview 
 
+<br>
+
 This tutorial will guide you through a clear roadmap to design a ready-to-use Python API that meets the basic industry standards. Although brief, it includes exercises, reflection points, and suggestions for improving upon the essentials.
 
  - By the end of this tutorial, one should  be able to  
@@ -33,12 +35,20 @@ This tutorial will guide you through a clear roadmap to design a ready-to-use Py
 
 ## :memo: Case Study
 
+<br>
+
+<img style="float: center" src="docs/images/wine-tasting.jpg">
+
 Since an API seeks to provide useful services to its end users, it is imperative to start with a working program/code in an experimental context. For our part, we decided to design the **Wine Quality Predictor** API ( :wine_glass: ) whose functional   prototype can be viewed [here](https://github.com/architjen/Orness_DS_training). 
+
+
   
 <br>
 <br>
 
 ## :checkered_flag: Pre-Requisites 
+
+<br>
 
 - A basic understanding of **Python 3** is required to follow this tutorial
 - A good IDE  ( Pycharm / Visual Code/ IntelliJ  ... )
@@ -51,4 +61,4 @@ Since an API seeks to provide useful services to its end users, it is imperative
 
 ---
 
-[Get Started ( Project Structure ) >>](docs/chapters/chapter_1.md#the-end-in-mind)
+[Get Started ( Project Structure ) >>](docs/chapters/chapter_1.md)

@@ -5,6 +5,8 @@
 <br>
 <br>
 
+<img style="float: center;" src="../images/security.jpg">
+
 ## Protect All Services  
 
 <br>
@@ -124,12 +126,13 @@ Below is our project tree/structure as at now
 ├── .gitignore
 ├── config.json
 ├── logging.yaml
+├── launcher.sh
 ├── requirements.txt
 ├── README.md  
 └── VERSION 
 ```
 
-> :camera: Find [here](https://github.com/beteko/wine-predictor-snapshots) the current state of the project as at now
+> :camera: Find [here](https://github.com/beteko/wine-predictor-snapshots/tree/main/iteration-1) the current state of the project as at now
 
 </details>
 
@@ -139,4 +142,4 @@ Below is our project tree/structure as at now
 ---
 
 
-[ << ( 4. Implementing Services ) ](../chapters/chapter_4.md#ping-service-implementation) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 6. Writing Unit Testing ) >>](../chapters/chapter_6.md#get-ready-for-testing) 
+[ << ( 4. Implementing Services ) ](../chapters/chapter_4.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 6. Writing Unit Testing ) >>](../chapters/chapter_6.md) 

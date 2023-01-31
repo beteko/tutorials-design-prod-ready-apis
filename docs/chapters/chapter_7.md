@@ -5,6 +5,9 @@
 <br>
 <br>
 
+<img style="float: center;" src="../images/bug-analysis.jpg">
+
+
 ## Linting with Flake8 
 
 <br>
@@ -91,4 +94,4 @@ $ mypy --install-types --non-interactive src
 ---
 
 
-[ << (  6. Writing Unit Testing ) ](../chapters/chapter_6.md#get-ready-for-testing) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 8.Packaging with Setup.py ) >>](../chapters/chapter_8.md)  
+[ << (  6. Writing Unit Testing ) ](../chapters/chapter_6.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 8.Packaging with Setup.py ) >>](../chapters/chapter_8.md)  

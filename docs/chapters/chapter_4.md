@@ -6,6 +6,8 @@
 <br>
 <br>
 
+<img style="float: center;" src="../images/DIY-services.jpg">
+
 ## PING Service Implementation  
 
 :tada: **DIY** :  let's implement  the **PING** service with the specification below
@@ -480,5 +482,5 @@ within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we wi
 ---
 
 
-[ << ( 3. Understanding OpenAPI ) ](../chapters/chapter_3.md#openapi-specs-structure) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 5. Enforcing Security ) >>](../chapters/chapter_5.md#protect-all-services)  
+[ << ( 3. Understanding OpenAPI ) ](../chapters/chapter_3.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 5. Enforcing Security ) >>](../chapters/chapter_5.md)  
  

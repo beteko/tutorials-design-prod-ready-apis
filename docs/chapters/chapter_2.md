@@ -2,14 +2,26 @@
 
 :house: [Overview](../../README.md)
 
+<br>
+<br>
+
 ## What is connexion ? 
+
+<br>
+
+
+<img style="float: center;" src="../images/connexion-img.jpg">
 
 [Connexion](https://github.com/spec-first/connexion) is a framework abstracting Flask that enable the design an API only by drafting the documentation (OpenAPI /Swagger YAML spec)  then maps the endpoints to your Python functions. 
 
 Also known as **Spec-First** Framework, the philosophy of **Connexion** is to start your API design by defining the interface/ specs then **connect** to your controllers without worrying about the underlying Framework (**Flask**).
 
+<br>
+<br>
 
 ## What are the advantages of using this library  ?
+
+<br>
 
 - Simplify the development process through a document-driven design
 - Ensure up-to-date documentation
@@ -19,8 +31,12 @@ Also known as **Spec-First** Framework, the philosophy of **Connexion** is to st
 - Handles OAuth 2 token-based authentication
 - Provides a Web Swagger Console UI
 
+<br>
+<br>
 
 ## How can I use it ? 
+
+<br>
 
 - First activate your virtual **venv** and upgrade the package installer **pip** 
     ```
@@ -49,5 +65,5 @@ Also known as **Spec-First** Framework, the philosophy of **Connexion** is to st
 ---
 
 
-[ << ( 1. Project Structure ) ](../chapters/chapter_1.md#the-end-in-mind) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 3. Understanding OpenAPI ) >>](../chapters/chapter_3.md#openapi-specs-structure)  
+[ << ( 1. Project Structure ) ](../chapters/chapter_1.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 3. Understanding OpenAPI ) >>](../chapters/chapter_3.md)  
  

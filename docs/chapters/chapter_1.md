@@ -2,8 +2,14 @@
 
 :house: [Overview](../../README.md)
 
+<br>
+<br>
+
+<img style="float: center;" src="../images/structure-proj.jpg">
 
 ## The end in mind 
+
+<br>
 
 Let's cheat a bit and get a  view into the target project structure and swagger UI ...
 
@@ -65,9 +71,13 @@ Let's cheat a bit and get a  view into the target project structure and swagger 
 
 </details>
 
----
 
-## First thing First ...  
+<br>
+<br>
+
+## First thing First ...
+
+<br>
 
 Let's create the basic blueprint of our project.
 
@@ -125,6 +135,6 @@ Initializing them with :
 
 ---
 
-[ << ( Overview ) ](../../README.md#table-of-contents)  &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 2. Starting with Connexion ) >>](../chapters/chapter_2.md#what-is-connexion-)  
+[ << ( Overview ) ](../../README.md)  &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 2. Starting with Connexion ) >>](../chapters/chapter_2.md)  
  
  

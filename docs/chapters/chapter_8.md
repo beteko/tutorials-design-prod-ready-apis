@@ -5,12 +5,16 @@
 <br>
 <br>
 
-This section seeks to share some lights on the process of generating a python artifact (.wheel, .tar.gz, .zip ) from  source code in view of storing it on a  repository manager such as (JFrog Artifactory, Pulp, Nexus... ) 
-
-
 **Binary and Build Artifact Manager - Nexus**
 <img style="float: center" src="../images/sonar-overview.png">
 image ref: overview  [Nexus](https://www.sonatype.com/products/nexus-repository)
+
+<br>
+
+This section seeks to share some lights on the process of generating a python artifact (.wheel, .tar.gz, .zip ) from  source code in view of storing it on a  repository manager such as (JFrog Artifactory, Pulp, Nexus... ) 
+
+
+
 
 <br>
 <br>
@@ -73,7 +77,7 @@ Then generate the artifacts by executing the command below in your terminal
 ```shell
 $ python setup.py sdist bdist_wheel
 ```
-Here `sdist` stands for sQmineAminource distribution and `bdist` for **Binary Distribution**. Find more [here](https://medium.com/ochrona/understanding-python-package-distribution-types-25d53308a9a)  on Python Package Distribution Types
+Here `sdist` stands for **Source distribution** and `bdist` for **Binary Distribution**. Find more [here](https://medium.com/ochrona/understanding-python-package-distribution-types-25d53308a9a)  on Python Package Distribution Types
 
 :information_source: : Make sure that the packages wheel and setuptools are install on your virtual environment
 
@@ -115,7 +119,7 @@ $ python setup.py sdist bdist_wheel
 
 <br>
 
-> :camera: Find [here](https://github.com/beteko/wine-predictor-snapshots) the current state of the project 
+> :camera: Find [here](https://github.com/beteko/wine-predictor-snapshots/tree/main/iteration-2) the current state of the project 
 
 
 <br>
@@ -124,4 +128,4 @@ $ python setup.py sdist bdist_wheel
 ---
 
 
-[ << ( 7. Ensuring Linting & Type Checking ) ](../chapters/chapter_7.md#linting-with-flake8) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 9. Automation ) >>](../chapters/chapter_9.md) 
+[ << ( 7. Ensuring Linting & Type Checking ) ](../chapters/chapter_7.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 9. Automation ) >>](../chapters/chapter_9.md) 

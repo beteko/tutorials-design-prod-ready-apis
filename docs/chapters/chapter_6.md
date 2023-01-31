@@ -160,6 +160,15 @@ def test_ping(app_client):
     assert "pong" in response.text
 ```
 
+Then  run all unit tests by executing the following command in your terminal 
+
+```sh 
+$ pytest -vs 
+
+```
+
+Here the flag `-v` activates the verbose mode while  `-s` is to display all message in the output stream if any. 
+
 
 <br>
 

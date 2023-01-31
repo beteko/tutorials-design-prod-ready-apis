@@ -5,8 +5,12 @@
 Formerly known as Swagger specs (v2.0.0) Open API  Specification (OAS) is a standard used to document a Restful APIs. 
 It is represented in JSON or YAML  and has a well-defined structure that evolves according to the version. 
 
+<br>
+<br>
 
 ## OpenApi Specs Structure
+
+<br>
 
 Below are the basic blocks  of an OpenAPI spec 
 
@@ -151,8 +155,12 @@ Below are the basic blocks  of an OpenAPI spec
   More details [here](https://swagger.io/specification/#external-documentation-object)
 </details>
 
+<br>
+<br>
 
 ## Basic example 
+
+<br>
 
 ```yaml
   openapi: 3.0.0
@@ -184,9 +192,12 @@ Below are the basic blocks  of an OpenAPI spec
 
 ```
 
-
+<br>
+<br>
 
 ## Customization 
+
+<br>
 
 It is possible to integrate your custom field beside the defined standard. You only need to start with  prefix your variable key 
 with `x-`. 
@@ -197,7 +208,12 @@ Example:
   - `x-bar` ...
 
 
+<br>
+<br>
+
 ## Visualize as you design
+
+<br>
 
 In order to render your YAML file as you design it kindly use the online tool below.
 
@@ -206,8 +222,12 @@ https://editor.swagger.io/
 <img style="float: center;" src="../images/swagger-editor.png">
 
 
+<br>
+<br>
 
 ## Make the ** connexion ** !
+
+<br>
 
 **Connexion** framework make use of the field `operationId` ( under the **path** section ) to bind the endpoints with their respective controllers/handlers. 
 
@@ -237,10 +257,12 @@ https://editor.swagger.io/
 
 
 
-
-
+<br>
+<br>
 
 ## References 
+
+<br>
 
 - https://editor.swagger.io/
 - https://swagger.io/specification/
@@ -252,6 +274,5 @@ https://editor.swagger.io/
 
 ---
 
-
-[ << ( 2. Starting with Connexion ) ](../chapters/chapter_2.md#what-is-connexion-) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 4. Implementing Services ) >>](../chapters/chapter_4.md#ping-service-implementation)  
+[ << ( 2. Starting with Connexion ) ](../chapters/chapter_2.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 4. Implementing Services ) >>](../chapters/chapter_4.md)  
  

@@ -2,6 +2,9 @@
 
 :house: [Overview](../../README.md)
 
+<img style="float: center;" src="../images/automate2.jpg">
+
+
 
 <br>
 <br>
@@ -10,14 +13,16 @@
 Well done for making it through this chapter :clap: !  This section will discuss the major steps involved in the Continuous Integration, Deployment and Learning. Those automation processes seek to answer the following questions
 
 - How do I ensure that any changes(feat, refactoring ...) to be introduced are free from linting/type related bugs and passes defined unit tests ?
-- How do I automate the deployment process on the target servers on all pre-checked changes are validated ? 
-- How do I automatically re-train my machine learning model when my corporation acquire more data ? 
+- How do I automate the deployment process on the target servers when all pre-checked changes are validated ? 
+- How do I automatically re-train my machine learning model when my company acquires more data ? 
 
 
 <br>
 <br>
 
 ## Continuous Integration 
+
+<img style="float: center;" src="../images/ci-pipeline.png">
 
 <br>
 
@@ -70,6 +75,9 @@ jobs:
 ## Continuous Deployment  
 
 <br>
+
+<img style="float: center;" src="../images/cd-pipeline.png">
+
 
 ```yaml
 
@@ -184,15 +192,12 @@ jobs:
 
 > :camera: Find [here](https://github.com/beteko/wine-predictor-api) the full project including  CI/ CD & CL files  
 
+
+
 <br>
 <br>
-
-
-
-
 
 ---
-
 
 [ << ( 8. Packaging with Setup.py ) ](../chapters/chapter_8.md) &nbsp;&nbsp; |  &nbsp;&nbsp;  [ ( 10. Going Further ! ) >>](../chapters/chapter_10.md)  
  
