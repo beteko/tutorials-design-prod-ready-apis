@@ -62,7 +62,7 @@ pytest-cov
 - Create the package `assets` in `./src/tests`
   - Then, create an sample or exact copy the CSV dataset in the `assets` folder and name it  `sample_data.csv`
   - Also create a copy of of a saved  model file in the `assets` folder  then name it `test_model.jl`
-- Finally implement a ***where** function in **./src/tests/__init__.py** module for facilitate referencing of the **asset** directory
+- Finally implement a ***where** function in **./src/tests/\_\_init\_\_.py** module for facilitate referencing of the **asset** directory
     ```python
     import os
 

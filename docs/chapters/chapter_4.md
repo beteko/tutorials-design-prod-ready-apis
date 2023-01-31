@@ -70,7 +70,7 @@
 
 To instantiate  a connexion object that will automagically links the specs to the controller, follow the following instructions  
 
-- In **wine_predictor_api/specs/__init__.py** add the below to easily reference your YAML specs 
+- In **wine_predictor_api/specs/\_\_init\_\_.py** add the below to easily reference your YAML specs 
   
   ```python 
     import os
@@ -79,7 +79,7 @@ To instantiate  a connexion object that will automagically links the specs to th
     def where():
         return os.path.dirname(os.path.realpath(__file__))
   ```
-- Then in **/src/wine_predictor_api/__init__.py**  create and initialize your connexion object referring the YAML spec  as described below 
+- Then in **/src/wine_predictor_api/\_\_init\_\_.py**  create and initialize your connexion object referring the YAML spec  as described below 
   ```python 
     import connexion
     from wine_predictor_api import specs
@@ -104,6 +104,7 @@ We will create a launcher file  **launcher.sh** in the root folder to define you
 - Create the file **./launcher.sh** with the content below
 
     ```sh 
+    export PYTHONPATH="src"
     export FLASK_APP="wine_predictor_api:create_app"
     export FLASK_DEBUG=true
     PORT=5000
@@ -120,8 +121,10 @@ We will create a launcher file  **launcher.sh** in the root folder to define you
     $ sh launcher.sh
     ```
 
-   
-> **Warning** :warning: : Though this launcher file can be commited on git, it is not meant to be executed during the development phase and **NOT**  on the production server.  
+- Access your swagger UI by appending `/ui` on your IP and PORT  `http://127.0.0.1:<PORT>`
+
+  
+> **Warning** :warning: : Though this launcher file can be committed on git, it is only meant to be executed during the development phase and **NOT**  on the production server.  
 
 <br>
 
@@ -136,17 +139,17 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
   **./logging.yaml**
   ```yaml 
-    version: 1
-    formatters:
+  version: 1
+  formatters:
     default:
-        format: '%(asctime)s %(levelname)s %(name)s %(message)s'
-    handlers:
+      format: '%(asctime)s %(levelname)s %(name)s %(message)s'
+  handlers:
     console:
-        class: logging.StreamHandler
-        level: DEBUG
-        formatter: default
-        stream: ext://sys.stdout
-    root:
+      class: logging.StreamHandler
+      level: DEBUG
+      formatter: default
+      stream: ext://sys.stdout
+  root:
     level: DEBUG
     handlers: [console]
   ```
@@ -156,7 +159,7 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
   For more information on logging file, kindly click [here](https://docs.python.org/3/library/logging.config.html) 
  
 
-- Then, initialize your logging object in **/src/wine_predictor_api/__init__.py**
+- Then, initialize your logging object in **/src/wine_predictor_api/\_\_init\_\_.py**
   
   ```python
     ...
@@ -219,12 +222,13 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
     }
   ```
 
-- Load  your configuration file in  **/src/wine_predictor_api/__init__.py**
+- Load  your configuration file in  **/src/wine_predictor_api/\_\_init\_\_.py**
   ``` python
   ...
 
   from typing import Dict, Any
   import json
+  import os
 
   ...
 
@@ -280,7 +284,7 @@ In order to properly log all activities **DEBUG, INFO, ERROR ...** for more acco
 
     ```
 
-  - In **/src/wine_predictor_api/__init__.py** update the submodule  **create_app** to pass  as argument the JSONbject   **spec_options**  into the **connexion** object 
+  - In **/src/wine_predictor_api/\_\_init\_\_.py** update the submodule  **create_app** to pass  as argument the JSONbject   **spec_options**  into the **connexion** object 
     ```python
       ...
 
@@ -430,7 +434,7 @@ within our YAML spec @**./src/wine_predictor_api/specs/openapi_spec.yaml** we wi
     - alcohol
       - Percentage of alcohol content in the wine.  Value should be between 8.4 to 14.9
   - returns the responses code and description  below 
-    -  **200** as response code when the "Wine quality is successfully estimated"
+    - **200** as response code when the "Wine quality is successfully estimated"
     - **400** as response code when an "Missing/Invalid required parameter "
     - **404** Model path is not found"
     - **500** as response code when there is an "Internal server error"
